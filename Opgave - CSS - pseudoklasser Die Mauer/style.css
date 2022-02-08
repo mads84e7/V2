@@ -1,0 +1,14 @@
+*{
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    width: 75rem;
+}
+header{
+    background-color: #CCCCCC ;
+}
+header img:last-child{
+    float: right;
+}
+

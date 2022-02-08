@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  height: 100vh;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  font-family: sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100vw;
+
+  grid-template-areas: 
+    "header" 
+    "main-content" 
+    "sidebar"
+    "twin"
+    "footer";
+}
+
+.header {
+  grid-area: header;
+  background-color: darkblue;
+}
+
+.main-content {
+  grid-area: main-content;
+  background-color: indianred;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: skyblue;
+}
+
+.twin {
+  grid-area: twin;
+  background-color: rebeccapurple;
+
+}
+
+.footer {
+  grid-area: footer;
+  background-color: goldenrod;
+}
+
+
+@media screen and (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+
+    grid-template-areas: 
+    "header header header header header header header header " 
+    ". main-content main-content main-content main-content sidebar sidebar ." 
+    ". main-content main-content main-content main-content sidebar sidebar ." 
+    ". main-content main-content main-content main-content sidebar sidebar ."  
+    ". twin twin twin twin twin twin ." 
+    ". twin twin twin twin twin twin ." 
+    "footer footer footer footer footer footer footer footer "
+    ;
+  }
+}
+
+/*Lav en mediaquery til Desktop som er fra 1100 px og op. */
+
+ @media screen and (min-width: 1100px) {
+  .grid-container {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+
+    grid-template-areas: 
+    "header header header header header header header header " 
+    ". main-content main-content main-content main-content sidebar sidebar ." 
+    ". main-content main-content main-content main-content sidebar sidebar ." 
+    ". main-content main-content main-content main-content sidebar sidebar ."  
+    ". twin twin twin twin twin twin ." 
+    ". twin twin twin twin twin twin ." 
+    "footer footer footer footer footer footer footer footer "
+    ;
+  }
+}

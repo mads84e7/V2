@@ -1,0 +1,155 @@
+/* CSS reset of all margin/padding (* star means all selectors) */
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --hue: 120;
+    --saturation: 44%;
+    --lightness: 80%;
+    --main-color: hsl(var(--hue), var(--saturation), var(--lightness));
+    --light-main-color:hsl(var(--hue), var(--saturation), calc(var(--lightness) + 14%));
+    --medium-dark-main-color:hsl(var(--hue), var(--saturation), calc(var(--lightness) - 50%));
+    --dark-main-color:hsl(var(--hue), calc(var(--saturation) - 4%), calc(var(--lightness) - 70%));
+    --border:2px solid var(--light-main-color);
+    --body:hsl(calc(var(--hue) + 200), var(--saturation), var(--lightness))
+}
+
+/* Main styling */
+
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100vh;
+    background-color: var(--body);
+}
+
+/* Header styling */
+
+header
+{
+    height: 100px;
+    padding-left: 110px;
+    /* background-color: #565462; */
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 100px;
+    font-size: 40px;
+    background-color: var(--main-color);
+}
+
+header h1
+{
+    color: var(--dark-main-color);
+}
+
+header a
+{
+    text-decoration: none;
+}
+
+.left
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.right
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Nav styling */
+
+nav, footer
+{
+    background-color: var(--medium-dark-main-color);
+    height: 40px;
+    line-height: 40px;
+    color: var(--light-main-color);
+}
+
+nav ul
+{
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+nav ul li
+{
+    float: left;
+    padding-left: 10px;
+    
+}
+
+nav ul li a
+{
+    border-right: var(--border);
+    color: inherit;
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+nav ul li a.noborder
+{
+    border-right: none;
+}
+
+nav img
+{
+    height: 40px;
+    float: right;
+}
+
+/* Content area styling */
+
+main
+{
+    margin: 50px 30px;
+}
+
+h2, p
+{
+    margin-bottom: 20px;
+}
+
+.left-column
+{
+    width: 60%;
+    float: left;
+}
+
+.right-column
+{
+    width: 40%;
+    float: right;
+}
+
+.right-column img
+{
+    width: 90%;
+    height: auto;
+    float: right;
+}
+
+/* Footer styling */
+
+footer
+{
+    margin-top: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+footer p
+{
+    margin-bottom: 0;
+}

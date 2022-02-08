@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  height: 100vh;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  font-family: sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100vw;
+
+  grid-template-areas: 
+    "header" 
+    "menu" 
+    "hero"
+    "main"
+    "banner"
+    "extra"
+    "image";
+}
+
+.header {
+  grid-area: header;
+  background-color: darkblue;
+}
+
+.menu {
+  grid-area: menu;
+  background-color: indianred;
+}
+
+.hero {
+  grid-area: hero;
+  background-color: skyblue;
+}
+
+.main {
+  grid-area: main;
+  background-color: rebeccapurple;
+
+}
+
+.banner {
+  grid-area: banner;
+  background-color: goldenrod;
+}
+
+.extra {
+  grid-area: extra;
+  background-color: lightgreen;
+}
+
+.image {
+  grid-area: image;
+  background-color: gray;
+}
+
+@media screen and (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: 
+    "header header header header" 
+    "hero hero hero hero" 
+    "hero hero hero hero" 
+    "hero hero hero hero" 
+    "hero hero hero hero" 
+    "menu main main main"
+    "menu main main main"
+    "menu main main main"
+    "menu main main main"
+    "menu banner banner banner"
+    "menu banner banner banner"
+    "menu extra extra image"
+    "menu extra extra image";
+  }
+}
+
+/* Lav en mediaquery til Desktop som er fra 1100 px og op. */
+
+@media screen and (min-width: 1100px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: 
+    "header menu menu menu" 
+    "hero hero hero hero" 
+    "hero hero hero hero" 
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "hero hero hero hero" 
+    "hero hero hero hero" 
+    "main main . image"
+    "main main . image"
+    "main main . extra"
+    "main main . extra"
+    "banner banner banner banner"
+    "banner banner banner banner";
+  }
+}
