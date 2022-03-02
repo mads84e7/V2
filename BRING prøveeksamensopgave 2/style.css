@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+*{
+    margin: 0rem;
+    padding: 0rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer"
+    ;
+}
+h1{
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    padding: 1rem;
+}
+header{
+    grid-area:header;
+    font-family: 'Nunito Sans';
+    font-weight: 300;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: grey;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.NATUAL{
+    font-family: 'Nunito Sans';
+    font-weight: 300;
+}
+footer{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+.NATUALLIVING{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "NATUAL NATUAL træhuse Selv Kontakt";
+    background-color: black;
+    color: white;
+}
+.img{
+    grid-area: img;
+}
+.NATUAL{
+    grid-area: NATUAL;
+}
+.træhuse{
+    grid-area: træhuse;
+    place-self: center;
+}
+.Selv{
+    grid-area: Selv;
+    place-self: center;
+}
+.Kontakt{
+    grid-area: Kontakt;
+    place-self: center;
+}
+
+
+
+
+
+
+.livstil{
+    display: grid;
+}
+
+main section .h1 h1{
+    text-align: center;
+}
+
+.Natual{
+    grid-area: Natual;
+}
+.vi{
+    grid-area: vi;
+}
+.fritidshuse{
+    grid-area: fritidshuse;
+}
+.de{
+    grid-area: de;
+}
+
+.Natual, .vi, .fritidshuse, .de{
+    padding: 1rem;
+}
+
+
+
+
+
+.traehus1{
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+}
+.section3{
+    display: grid;
+    padding: 1rem;
+    background-color: grey;
+}
+.div1, .div2, .div3{
+    background-color: white;
+}
+.Prisen{
+    padding-bottom: 3rem;
+}
+.Pris, .Prisen{
+    padding-left: 1rem;
+}
+
+
+
+
+
+.Hejrelunden{
+    display: flex;
+    justify-content: center;
+    background: url(img/5642_Hejrelunden_\(20\).jpg);
+    height: 30rem;
+    background-position: center;
+    place-items: center;
+}
+.træ-huse{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    border: 5px solid white;
+    border-radius: 5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i{
+    font-size:2rem;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". Fritdshus Kontakt Natual i .";
+}
+.Fritdshus{
+    grid-area: Fritdshus;
+}
+.Kontakt{
+    grid-area: Kontakt;
+}
+.Natual{
+    grid-area: Natual;
+}
+.i{
+    grid-area: i;
+}
+
+
+@media screen and (min-width: 768px){
+    .img img{
+        height: 30rem;
+    }
+    .Natual1{
+        grid-area: Natual1;
+    }
+    .vi1{
+        grid-area: vi1;
+    }
+    .fritidshuse1{
+        grid-area: fritidshuse1;
+    }
+    .de1{
+        grid-area: de1;
+    }
+    .NATUALLIVING{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        ". NATUAL NATUAL træhuse Selv Kontakt .";
+    }
+    .livstil{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        ". Natual1 Natual1 vi1 vi1 ."
+        ". fritidshuse1 fritidshuse1 de1 de1 ."
+        ;
+    }
+    .div1{
+        grid-area: div1;
+        
+    }
+    .div2{
+        grid-area: div2;
+    }
+    .div3{
+        grid-area: div3;
+    }
+
+    .section3{
+        grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        ". div1 div2 div3 .";
+        gap: 2rem;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    
+    .img img{
+        height: 45rem;
+    }
+
+    .NATUALLIVING div h1{
+        font-size: 3rem;
+    }
+    .NATUALLIVING div p{
+        font-size: 1.3rem;
+    }
+    .h1 h1{
+        font-size: 3rem;
+    } 
+    .livstil div p{
+        font-size: 1.3rem;
+    }
+
+    .NATUALLIVING{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        ". NATUAL NATUAL træhuse Selv Kontakt .";
+    }
+
+    .livstil{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        ". Natual1 Natual1 vi1 vi1 ."
+        ". fritidshuse1 fritidshuse1 de1 de1 ."
+        ;
+    }
+}

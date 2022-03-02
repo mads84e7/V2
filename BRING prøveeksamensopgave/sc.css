@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Mukta', sans-serif;
+
+    white-space: wrap;
+
+    scroll-behavior: smooth;
+
+    list-style-type: none;
+}
+
+/*General opsætning*/
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25vw;
+
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 5px outset rgba(255, 255, 255, 0.336);
+
+    z-index: 1000;
+
+}
+
+footer {
+    padding-top: 2rem;
+
+    background-color: #333333;
+}
+
+main>div {
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    justify-content: center;
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+section {
+    max-width: 1024px;
+}
+
+/* Track and Trace */
+
+.searchbar {
+    position: relative;
+}
+
+input {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-right: 4rem;
+    padding-left: 0.25rem;
+    text-align: left;
+
+    border: 1px solid rgba(68, 68, 68, 0.5);
+
+    border-radius: 5px ;
+
+}
+
+.searchbar img {
+    position:absolute;
+    top: 0.25rem;
+    left: 12rem;
+}
+
+.searchbar input ~ img {
+    opacity: 100%;
+    transition: all 0.5s;
+}
+
+.searchbar input:focus ~ img {
+    opacity: 0%;
+}
+
+/*Menu*/
+
+.menu {
+    padding-right: 0.5rem;
+
+}
+
+.menu h2, .menu h3 {
+    font-weight: 300;
+}
+
+.menu img {
+    padding-top: 0.5rem;
+    transform: scale(175%);
+
+}
+
+.menu input {
+    z-index: 1000;
+    position: absolute;
+    top: 1.3rem;
+    right: 0.80rem;
+    transform: scale(275%);
+
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu ul {
+    display: block;
+    position: absolute;
+    transform: translateX(150px);
+
+    text-align: left;
+
+    width: 100%;
+
+    background-color: white;
+
+    transition: all 1s;
+}
+
+.menu input:checked ~ ul {
+
+    transform: translateX(-15.625rem);
+
+}
+
+.menu ul li {
+    padding-left: 1.5rem;
+
+    cursor: pointer;
+}
+
+.menu ul li:first-of-type:hover {
+    background-color: white;
+    cursor:default;
+}
+
+.menu ul li:hover {
+
+    background-color: rgb(236, 236, 236);
+
+}
+
+.menu ul li h3::before {
+    content: url(Materialer/baseline-keyboard-arrow-right.svg);
+}
+
+.menuchild {
+    background-color: #f1f1f1;
+    margin-top: 5rem;
+
+    border-bottom: 5px outset #f1f1f1;
+}
+
+.menuchild img {
+
+    width: 2.5vw;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+
+}
+
+.menuchild p {
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+/*Sections(content areas)*/
+
+.sec1 {
+    background-image: url(Materialer/hero-02.jpg);
+    height: 75vh;
+
+    place-items: center;
+}
+
+.sec3 {
+    background-color: #edcb35;
+    margin-bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec4 {
+
+    background-color: #7bc144;
+}
+
+.sec6 {
+
+    background-color: #edcb35;
+    margin-bottom: 0;
+}
+
+.sec7 {
+    background-image: url(Materialer/budbil1.jpg);
+    background-position: center;
+    margin-bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    height: 31.25rem;
+}
+
+/*Containere*/
+
+/*Tjenester (Section2)*/
+
+.services {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Schild {
+    flex-basis: 33.33%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+/*Text container (Section3)*/
+
+.txtcontainer {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.txtcontainer p {
+    flex-basis: 50%;
+
+    white-space: wrap;
+}
+
+/*E-handel container (Section4)*/
+
+.shop {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 1fr ;
+    place-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+/*Modtagerservice container (Section5)*/
+
+.recieve {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 1fr ;
+    place-items: center;
+
+    margin-bottom: 30px;
+}
+
+/*Kundeservice container (Section6)*/
+
+.customerservice {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "title title"
+    "info map"
+    "contacts map"
+    "contacts map"
+    ". map"
+    ;
+
+    row-gap: 0.75rem;
+    column-gap: 4rem;
+
+    margin-bottom: -2rem;
+
+
+
+
+}
+
+.customerservice h1 {
+    grid-area: title;
+}
+
+.customerservice p {
+    grid-area: info;
+    text-align: left;
+}
+
+.customerservice img {
+    grid-area: map;
+    transform: translateY(-7rem) scale(85%);
+}
+
+.customerservice ul {
+    grid-area: contacts;
+    margin-left: 35px;
+}
+
+.customerservice ul li {
+    text-align: left;
+    font-weight: 800;
+}
+
+/*Redirect*/
+
+.readmore {
+    background-color: #333333;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 27rem;
+    margin-left: 27rem;
+    margin-bottom: 3rem;
+
+    border: 2px solid #333333;
+    border-radius: 5px;
+}
+
+.readmore:hover {
+    background-color: #292929;
+    cursor: pointer;
+}
+
+.readmore2 {
+    background-color: #7bc144;
+    border: 2px solid #7bc144;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 27rem;
+    margin-left: 27rem;
+    margin-bottom: 1vw;
+}
+
+.readmore2:hover {
+    background-color: #6ead3e;
+    cursor: pointer;
+}
+
+/* N/A */
+
+.fchild {
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.fchild h1 {
+    font-size: 4.5vw;
+}
+
+.fchild h3 {
+    font-size: 1.5vw;
+    font-weight: 300;
+
+    margin-bottom: 50px;
+}
+
+/*Footer styling*/
+
+.footcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    place-items: center;
+    grid-template-areas: "title title title"
+    "hq bud gods"
+    ". temp packages";
+}
+
+footer h2 {
+    color: White;
+}
+
+footer h3 {
+    color: #7bc144;
+}
+
+footer ul {
+    color: white;
+}
+
+.foottop {
+    grid-area: title;
+}
+
+.hq {
+    grid-area: hq;
+}
+
+.bud {
+    grid-area: bud;
+}
+
+.gods {
+    grid-area: gods;
+}
+
+.temp {
+    grid-area: temp;
+}
+
+.packages {
+    grid-area: packages;
+}
